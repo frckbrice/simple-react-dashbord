@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-purple-600 focus:border-transparent focus:outline-none placeholder-gray-400 text-base shadow-md text-gray-700 ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input.error {
+  @apply border-red-500 border-2; 
 }
+
+.error {
+  @apply border-red-500 font-semibold;
+}
+
+.btn {
+  @apply w-full px-4 py-2 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-50 transition ease-in text-center text-base font-semibold shadow-md rounded-lg focus:outline-none text-white;
+}
+
+.img {
+  @apply w-24 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto 
+}
+
+.btn:disabled {
+  @apply bg-gray-400
+}
+
